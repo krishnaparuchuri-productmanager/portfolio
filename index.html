@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Krishna Paruchuri — Product Leader</title>
+<meta name="description" content="Krishna Paruchuri is a Senior Product Manager with 15+ years building AI-powered products, fintech platforms, and identity management systems." />
+<meta property="og:title" content="Krishna Paruchuri — Product Leader" />
+<meta property="og:description" content="15+ years building AI-powered products, fintech platforms, and identity management systems." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --paper: #f5f1ea;
+    --paper-deep: #ece6db;
+    --ink: #1a1a1a;
+    --ink-soft: #3a3a3a;
+    --ink-muted: #6b6660;
+    --accent: #b8451f;
+    --rule: rgba(26, 26, 26, 0.12);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Paper grain texture — adds tactile feel without an image */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.4;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  ::selection { background: var(--accent); color: var(--paper); }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ---------- Layout ---------- */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ---------- Top bar ---------- */
+  .topbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--paper) 60%, transparent);
+    backdrop-filter: blur(4px);
+  }
+  .topbar .mark {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .topbar .mark span { color: var(--accent); }
+  .topbar nav {
+    display: flex;
+    gap: 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .topbar nav a {
+    color: var(--ink-muted);
+    transition: color 0.2s;
+    position: relative;
+  }
+  .topbar nav a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -4px;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s;
+  }
+  .topbar nav a:hover { color: var(--ink); }
+  .topbar nav a:hover::after { width: 100%; }
+  @media (max-width: 720px) {
+    .topbar { padding: 18px 24px; }
+    .topbar nav { display: none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 140px 0 80px;
+    position: relative;
+  }
+  .hero .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero .eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(48px, 9vw, 112px);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+    font-variation-settings: "opsz" 144;
+  }
+  .hero h1 .accent {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent);
+  }
+  .hero .lede {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(20px, 2.2vw, 26px);
+    line-height: 1.4;
+    max-width: 720px;
+    color: var(--ink-soft);
+    margin-bottom: 48px;
+    font-variation-settings: "opsz" 36;
+  }
+  .hero .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    transition: all 0.25s;
+    align-self: flex-start;
+  }
+  .hero .cta:hover {
+    background: var(--ink);
+    color: var(--paper);
+    gap: 16px;
+  }
+  .hero .cta .arrow { transition: transform 0.25s; }
+  .hero .cta:hover .arrow { transform: translateX(2px); }
+
+  /* Hero corner ornament */
+  .hero .corner {
+    position: absolute;
+    top: 140px;
+    right: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-muted);
+    text-align: right;
+    line-height: 1.8;
+  }
+  .hero .corner .label { color: var(--accent); }
+  @media (max-width: 720px) { .hero .corner { display: none; } }
+
+  /* ---------- Section scaffolding ---------- */
+  section { padding: 120px 0; position: relative; }
+  .section-head {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    margin-bottom: 72px;
+    align-items: baseline;
+  }
+  .section-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .section-num::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+    vertical-align: middle;
+    margin-right: 12px;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 96;
+  }
+  @media (max-width: 720px) {
+    .section-head { grid-template-columns: 1fr; gap: 16px; margin-bottom: 48px; }
+    section { padding: 80px 0; }
+  }
+
+  /* ---------- About ---------- */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+  }
+  .about-grid .spacer { }
+  .about-body {
+    max-width: 720px;
+  }
+  .about-body p {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    font-variation-settings: "opsz" 36;
+  }
+  .pullquote {
+    border-left: 2px solid var(--accent);
+    padding: 4px 0 4px 24px;
+    margin: 48px 0;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 720px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .about-body p { font-size: 19px; }
+    .pullquote { font-size: 20px; padding-left: 18px; }
+  }
+
+  /* ---------- Competencies ---------- */
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+  }
+  .comp-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .comp-item {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    transition: padding-left 0.3s;
+    cursor: default;
+  }
+  .comp-item:hover { padding-left: 12px; }
+  .comp-item .idx {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-muted);
+  }
+  .comp-item .name {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 22px;
+    font-variation-settings: "opsz" 36;
+  }
+  @media (max-width: 720px) {
+    .comp-grid { grid-template-columns: 1fr; }
+    .comp-list { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Work ---------- */
+  .work-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+  }
+  .work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .work-item {
+    padding: 40px 0;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    transition: background 0.3s;
+  }
+  .work-item:last-child { border-bottom: 1px solid var(--rule); }
+  .work-item .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .work-item h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    font-variation-settings: "opsz" 72;
+  }
+  .work-item .desc {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    font-variation-settings: "opsz" 24;
+  }
+  @media (max-width: 720px) {
+    .work-grid { grid-template-columns: 1fr; }
+    .work-item { grid-template-columns: 1fr; gap: 20px; padding: 32px 0; }
+    .work-item h3 { font-size: 30px; }
+  }
+
+  /* ---------- Contact ---------- */
+  .contact {
+    padding: 160px 0 80px;
+  }
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+  }
+  .contact-body {
+    max-width: 720px;
+  }
+  .contact h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+    font-variation-settings: "opsz" 96;
+  }
+  .contact h2 .italic { font-style: italic; font-weight: 300; color: var(--accent); }
+  .contact .email {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--ink);
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .contact .email:hover { color: var(--accent); border-color: var(--accent); }
+  @media (max-width: 720px) {
+    .contact-inner { grid-template-columns: 1fr; }
+    .contact { padding: 80px 0 40px; }
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 40px 0 60px;
+    border-top: 1px solid var(--rule);
+    margin-top: 40px;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .footer-links { display: flex; gap: 32px; }
+  .footer-links a { transition: color 0.2s; }
+  .footer-links a:hover { color: var(--accent); }
+  @media (max-width: 720px) {
+    .footer-inner { flex-direction: column; gap: 20px; align-items: flex-start; }
+    .footer-links { gap: 20px; flex-wrap: wrap; }
+  }
+
+  /* ---------- Reveal animation ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="mark">KP <span>/</span> Product</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#competencies">Competencies</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="corner">
+      <div class="label">— Currently</div>
+      <div>Senior Product Manager</div>
+      <div>15+ years shipping</div>
+    </div>
+
+    <div class="eyebrow">Krishna Paruchuri</div>
+    <h1>Product leader<br/>at the edge of<br/><span class="accent">AI &amp; fintech.</span></h1>
+    <p class="lede">
+      Fifteen years building AI-powered products, fintech platforms, and identity systems —
+      from zero-to-one prototypes to enterprise scale.
+    </p>
+    <a href="#work" class="cta">
+      <span>View my work</span>
+      <span class="arrow">→</span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="reveal">
+    <div class="section-head">
+      <div class="section-num">01 — About</div>
+      <h2 class="section-title">A bridge between<br/>strategy &amp; system.</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="spacer"></div>
+      <div class="about-body">
+        <p>
+          I bridge business strategy and technical architecture — translating ambiguous problems
+          into shipped products that move metrics. My work spans agentic AI systems, fraud detection,
+          and the quiet plumbing of modern fintech.
+        </p>
+        <div class="pullquote">
+          "A clean, intuitive UI should seamlessly mask substantial engineering complexity."
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPETENCIES -->
+  <section id="competencies" class="reveal">
+    <div class="section-head">
+      <div class="section-num">02 — Core Competencies</div>
+      <h2 class="section-title">What I do well.</h2>
+    </div>
+
+    <div class="comp-grid">
+      <div class="spacer"></div>
+      <div class="comp-list">
+        <div class="comp-item"><span class="idx">/01</span><span class="name">Product Architecture</span></div>
+        <div class="comp-item"><span class="idx">/02</span><span class="name">Agentic AI</span></div>
+        <div class="comp-item"><span class="idx">/03</span><span class="name">Fraud Detection &amp; Identity</span></div>
+        <div class="comp-item"><span class="idx">/04</span><span class="name">LLM Observability</span></div>
+        <div class="comp-item"><span class="idx">/05</span><span class="name">Fintech Ecosystems</span></div>
+        <div class="comp-item"><span class="idx">/06</span><span class="name">0 → 1 Prototyping</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="reveal">
+    <div class="section-head">
+      <div class="section-num">03 — Featured Work</div>
+      <h2 class="section-title">Selected projects.</h2>
+    </div>
+
+    <div class="work-grid">
+      <div class="spacer"></div>
+      <div class="work-list">
+
+        <article class="work-item">
+          <div>
+            <div class="tag">AI Fraud Detection · MVP</div>
+            <h3>FraudShield</h3>
+          </div>
+          <div class="desc">
+            Rapidly prototyped fraud detection MVP with embedded identity verification —
+            from concept to working demo in weeks. Integrated risk-scoring pipeline with
+            a calm, decision-ready interface for analysts.
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div>
+            <div class="tag">Agentic AI · LLM Evaluations</div>
+            <h3>SOP Deviation<br/>Review Assistant</h3>
+          </div>
+          <div class="desc">
+            An AI agent surfacing SOP deviations in real time, instrumented with Langfuse
+            observability and continuous human feedback loops. Designed for trust, not novelty.
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div>
+            <div class="tag">B2B Platform · Redesign</div>
+            <h3>TPSS Security</h3>
+          </div>
+          <div class="desc">
+            Complete platform redesign and modernization for a B2B security services provider —
+            information architecture, design system, and shipped UI. Took a legacy interface
+            and made it feel inevitable.
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact reveal">
+    <div class="contact-inner">
+      <div class="section-num">04 — Contact</div>
+      <div class="contact-body">
+        <h2>Building something<br/>at the edge of AI,<br/>identity, or fintech?<br/><span class="italic">Let's talk.</span></h2>
+        <a href="mailto:krishna@example.com" class="email">krishna@example.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2026 Krishna Paruchuri</div>
+      <div class="footer-links">
+        <a href="mailto:krishna@example.com">Email</a>
+        <a href="https://linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  // Intersection-based reveal — single observer, no scroll listeners.
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
