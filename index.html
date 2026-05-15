@@ -154,6 +154,16 @@
   .media-placeholder .subtext { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--ink-muted); letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.6; }
   .media-placeholder.video { aspect-ratio: 16 / 9; }
 
+  .screenshot { margin: 0 0 20px; }
+  .screenshot img { width: 100%; height: auto; display: block; border: 1px solid var(--rule-strong); }
+  .screenshot figcaption { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); margin-top: 8px; padding-left: 2px; }
+
+  .mobile-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 0 0 24px; }
+  .mobile-grid .mobile-shot { margin: 0; }
+  .mobile-grid .mobile-shot img { width: 100%; height: auto; display: block; border: 1px solid var(--rule-strong); border-radius: 6px; background: #0a0a0a; }
+  .mobile-grid .mobile-shot figcaption { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); margin-top: 8px; padding-left: 2px; text-align: center; }
+  @media (max-width: 720px) { .mobile-grid { grid-template-columns: 1fr 1fr; gap: 10px; } }
+
   .project-links { display: flex; flex-wrap: wrap; gap: 20px; padding-top: 12px; border-top: 1px solid var(--rule); }
   .project-link { display: inline-flex; align-items: center; gap: 6px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s, gap 0.2s; }
   .project-link:hover { color: var(--accent); border-color: var(--accent); gap: 10px; }
@@ -289,11 +299,14 @@
           <div class="left">
             <div class="tag">Agentic AI · LLM Evaluations · RAG</div>
             <h3>SOP Deviation<br/>Review Assistant.</h3>
-            <div class="media-placeholder">
-              <div class="icon">[ IMG ]</div>
-              <div class="text">Eval dashboard &amp; agent output</div>
-              <div class="subtext">screenshots coming soon</div>
-            </div>
+            <figure class="screenshot">
+              <img src="sop-dashboard.jpg" alt="SOP Deviation Review — Analytics Dashboard with KPI cards, daily review chart, severity breakdown, and cost estimate" />
+              <figcaption>Analytics dashboard — KPIs, cost, severity breakdown</figcaption>
+            </figure>
+            <figure class="screenshot">
+              <img src="sop-evals.jpg" alt="SOP Deviation Review — Eval Suite showing 87% Agent vs 13% Baseline pass rates across Groundedness, Classification, Escalation, and Clarity dimensions" />
+              <figcaption>Eval suite — agent vs. always-escalate baseline</figcaption>
+            </figure>
             <div class="pillars">
               <div class="pillar-label">Four agent pillars</div>
               <div class="pillar-list">
@@ -310,7 +323,7 @@
             <div class="stat-strip">
               <div class="stat"><div class="value">87<span class="small">%</span></div><div class="label">Agent pass rate</div></div>
               <div class="stat"><div class="value">13<span class="small">%</span></div><div class="label">Baseline pass rate</div></div>
-              <div class="stat"><div class="value">6.4<span class="small">/8</span></div><div class="label">Avg eval score</div></div>
+              <div class="stat"><div class="value">6.67<span class="small">/8</span></div><div class="label">Avg eval score</div></div>
             </div>
             <div class="tech-strip">
               <div><span class="label">Stack —</span>FastAPI · React · Claude Haiku 4.5 · scikit-learn TF-IDF · SQLite</div>
@@ -329,16 +342,14 @@
           <div class="supporting-card">
             <div class="tag">AI · Healthcare · Full-stack prototype</div>
             <h4>MedAssist AI</h4>
-            <div class="media-placeholder">
-              <div class="icon">[ IMG ]</div>
-              <div class="text">Doctor portal &amp; SOAP extraction</div>
-              <div class="subtext">screenshots coming soon</div>
-            </div>
-            <div class="media-placeholder video">
-              <div class="icon">[ ▶ VIDEO ]</div>
-              <div class="text">Product walkthrough</div>
-              <div class="subtext">recording coming soon</div>
-            </div>
+            <figure class="screenshot">
+              <img src="medassist-claims.jpg" alt="MedAssist AI — Claim Generation screen showing auto-generated ICD-10 codes with clinical evidence, detected coding gaps, and denial risk patterns" />
+              <figcaption>Claim generation — ICD-10 codes &amp; gap detection</figcaption>
+            </figure>
+            <figure class="screenshot">
+              <img src="medassist-capture.jpg" alt="MedAssist AI — Capture Details screen with conversation input and a structured SOAP note extracted by Claude on the right" />
+              <figcaption>Capture details — Claude-extracted SOAP note</figcaption>
+            </figure>
             <p class="desc">A Claude-powered clinical workflow application covering six phases of a patient encounter — from AI-assisted intake and appointment scheduling through to voice-transcribed SOAP notes, LOINC-mapped diagnostic orders, lab trend analysis, and auto-generated ICD-10/CPT claims. Built across two role-based portals for doctors and clinical assistants.</p>
             <div class="tech-line">
               <div><span class="label">Stack —</span>React 18 · Vite · Tailwind · Recharts</div>
@@ -356,10 +367,19 @@
             <div class="tag">Fintech · Identity · Mobile MVP</div>
             <h4>FraudShield</h4>
             <span class="status-badge">In active development</span>
-            <div class="media-placeholder">
-              <div class="icon">[ IMG ]</div>
-              <div class="text">Risk score &amp; analyst dashboard</div>
-              <div class="subtext">screenshots coming soon</div>
+            <div class="mobile-grid">
+              <figure class="mobile-shot">
+                <img src="fraudshield-scan.jpg" alt="FraudShield — Aadhaar scan screen with masked identity input and recent scan history" />
+                <figcaption>Scan</figcaption>
+              </figure>
+              <figure class="mobile-shot">
+                <img src="fraudshield-risk.jpg" alt="FraudShield — Risk result for a flagged identity with 69/100 score, AI confidence, and four detected fraud signals" />
+                <figcaption>Risk result</figcaption>
+              </figure>
+              <figure class="mobile-shot">
+                <img src="fraudshield-cases.jpg" alt="FraudShield — Case queue listing prioritized fraud cases with status and risk scores" />
+                <figcaption>Case queue</figcaption>
+              </figure>
             </div>
             <p class="desc">A mobile-first identity verification and fraud detection tool aimed at India's Aadhaar-linked KYC market — banks, NBFCs, fintechs, and insurance teams. Scans for fraud signals including SIM swaps, synthetic identities, duplicate accounts, and velocity attacks, returning a 0–100 risk score with AI confidence in under two seconds. Built around UIDAI-aligned masking and Indian regulatory context (RBI, DPDP Act).</p>
             <div class="tech-line">
