@@ -60,6 +60,10 @@
         "Fraud Detection",
         "Identity Verification",
         "Agentic AI",
+        "Multi-Agent Orchestration",
+        "AI Agent Governance",
+        "Agent Lifecycle Management",
+        "LLM Observability",
         "Retrieval Augmented Generation",
         "LLM Evaluation",
         "Enterprise B2B"
@@ -87,9 +91,18 @@
       "@id": "https://krishnaparuchuri.com/#gmp",
       "name": "GMP Deviation Review AI Assistant",
       "description": "An AI assistant for pharmaceutical QA teams that compresses GMP deviation review from 20–60 minutes per incident to under 10 seconds, achieving an 87% agent pass rate vs 13% baseline. Built with FastAPI, Claude Haiku, TF-IDF retrieval over SOPs, and an LLM-as-judge evaluation framework.",
-      "url": "https://gmpdeviationreview.krishnaparuchuri.com/chat",
+      "url": "https://gmpdeviationreview.krishnaparuchuri.com/",
       "author": { "@id": "https://krishnaparuchuri.com/#person" },
       "keywords": "GMP deviation review, pharmaceutical QA, agentic AI, RAG, LLM evaluation, FastAPI, Claude AI, structured output"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://krishnaparuchuri.com/#agentops",
+      "name": "AgentOps — AI Agent Governance Platform",
+      "description": "A multi-agent governance platform managing AI agents across their full lifecycle — from registration through production monitoring and retirement. Features maker-checker approval workflows, eval-gated promotion, cost tracking, LangSmith observability, agent topology visualisation, and an immutable audit log. Governs two production AI systems: GMP Deviation Review and MediAssist multi-agent clinical workflow (Router + 5 specialists).",
+      "url": "https://agentops.krishnaparuchuri.com/",
+      "author": { "@id": "https://krishnaparuchuri.com/#person" },
+      "keywords": "AI agent governance, agent lifecycle management, multi-agent orchestration, LLM observability, LangSmith, maker-checker approval, eval-gated promotion, agentic AI, AI governance platform, agent monitoring, AgentOps, AI audit log, regulated AI, clinical AI governance"
     },
     {
       "@type": "CreativeWork",
@@ -422,6 +435,63 @@ footer { padding: 40px 0 60px; border-top: 1px solid var(--rule); margin-top: 40
           </div>
         </div>
 
+        <div class="subsection-label" style="margin-top: 80px;">Featured Experiments</div>
+
+        <div class="featured-card">
+          <div class="left">
+            <div class="tag">AI Governance · Multi-Agent Orchestration · LLM Observability</div>
+            <h3>AgentOps —<br/>AI Agent<br/>Governance Platform.</h3>
+
+            <figure class="screenshot">
+              <img src="agentops-registry.png" alt="AgentOps Agent Registry — all managed agents with lifecycle stage badges showing Proposed, Under Review, Approved, Under Monitoring, In Production, and Retired stages" />
+              <figcaption>Agent Registry — 7 agents, two production AI systems</figcaption>
+            </figure>
+
+            <figure class="screenshot">
+              <img src="agentops-topology.png" alt="AgentOps Agent Detail — MediAssist Router topology card showing orchestration tree with 5 sub-agent chips and clickable navigation between agents" />
+              <figcaption>Topology card — Router + 5 specialist agents, live stage badges</figcaption>
+            </figure>
+
+            <figure class="screenshot">
+              <img src="agentops-governance.png" alt="AgentOps Governance Queue — pending approval requests, active alerts including eval degradation and cost threshold warnings" />
+              <figcaption>Governance Queue — maker-checker approvals + active alerts</figcaption>
+            </figure>
+          </div>
+
+          <div>
+            <p class="desc">A multi-agent governance platform managing AI agents from registration through retirement — built to answer the question: <em>what sits above the agents?</em> The platform enforces a 7-stage lifecycle state machine, maker-checker approval workflows, eval-gated promotion, cost tracking per agent, LangSmith APAC trace observability, and an append-only audit log with no update or delete endpoint.</p>
+
+            <p class="desc">Currently governs two production AI systems: the GMP Deviation Review single agent and the MediAssist multi-agent clinical workflow — a Router + 5 specialist architecture where Haiku handles scheduling and order mapping, and Sonnet handles clinical reasoning tasks (SOAP scribe, lab results, billing). Every live MediAssist call pushes a PHI-anonymised trace to LangSmith and a cost record to the governance backend.</p>
+
+            <div class="stat-strip">
+              <div class="stat"><div class="value">7</div><div class="label">Lifecycle stages</div></div>
+              <div class="stat"><div class="value">6</div><div class="label">Managed agents</div></div>
+              <div class="stat"><div class="value">0</div><div class="label">Delete endpoints</div></div>
+            </div>
+
+            <div class="tech-strip">
+              <div><span class="label">Stack —</span>FastAPI · SQLite WAL · React 18 SPA · Cloudflare Workers · Railway</div>
+              <div><span class="label">AI —</span>Claude Haiku 4.5 · Claude Sonnet 4.6 · LangSmith APAC observability</div>
+              <div><span class="label">Pattern —</span>Maker-checker · Eval-gated promotion · PHI anonymisation · INSERT-only audit</div>
+              <div><span class="label">Governs —</span>GMP Deviation Review (pharma QA) · MediAssist (clinical workflow)</div>
+            </div>
+
+            <div class="media-placeholder video">
+              <video controls preload="none" poster="agentops-topology.png" style="width:100%;border-radius:8px;">
+                <source src="https://github.com/krishnaparuchuri-productmanager/agentops/raw/master/docs/agentops-demo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div style="font-size:0.75rem;color:var(--ink-muted);margin-top:6px;">70-second walkthrough — agent creation → lifecycle gating → topology view → LangSmith observability</div>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/krishnaparuchuri-productmanager/agentops" target="_blank" rel="noopener" class="project-link">View repository <span class="arrow">→</span></a>
+              <a href="https://agentops.krishnaparuchuri.com/" target="_blank" rel="noopener" class="project-link">Live demo <span class="arrow">→</span></a>
+              <a href="https://github.com/krishnaparuchuri-productmanager/agentops/raw/master/docs/agentops-demo.mp4" target="_blank" rel="noopener" class="project-link">Watch demo <span class="arrow">→</span></a>
+            </div>
+          </div>
+        </div>
+
         <div class="subsection-label" style="margin-top: 80px;">Featured Experiment</div>
 
         <div class="featured-card">
@@ -470,7 +540,7 @@ footer { padding: 40px 0 60px; border-top: 1px solid var(--rule); margin-top: 40
 
             <div class="project-links">
               <a href="https://github.com/krishnaparuchuri-productmanager/sop-deviation-review" target="_blank" rel="noopener" class="project-link">View repository <span class="arrow">→</span></a>
-              <a href="https://gmpdeviationreview.krishnaparuchuri.com/chat" target="_blank" rel="noopener" class="project-link">Live demo <span class="arrow">→</span></a>
+              <a href="https://gmpdeviationreview.krishnaparuchuri.com/" target="_blank" rel="noopener" class="project-link">Live demo <span class="arrow">→</span></a>
               <a href="https://github.com/krishnaparuchuri-productmanager/sop-deviation-review/raw/main/docs/demo/app-demo.mp4" target="_blank" rel="noopener" class="project-link">Watch demo <span class="arrow">→</span></a>
             </div>
           </div>
