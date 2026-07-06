@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <!-- ═══ SEO: Title & Core Meta ═══ -->
-<title>Krishna Paruchuri | Senior Product Manager — Healthcare, Fintech & AI</title>
-<meta name="description" content="Senior Product Manager with 16+ years building healthcare EHR/EMR, fintech fraud detection, and agentic AI products. Previously IBM Watson Health and Reliance Jio. Currently at Experian." />
+<title>Krishna Paruchuri | Senior Product Manager — Healthcare, Fintech, AI Governance & LLM Observability</title>
+<meta name="description" content="Senior Product Manager with 16+ years building healthcare EHR/EMR, fintech fraud detection, agentic AI, and AI governance products. Specialises in agent lifecycle management, LLM observability, and eval-gated deployment. Previously IBM Watson Health and Reliance Jio. Currently at Experian." />
+<meta name="keywords" content="product manager, healthcare product, EHR EMR, agentic AI, AI governance, agent lifecycle management, LLM observability, eval-gated deployment, multi-agent orchestration, LangSmith, fraud detection, fintech, IBM Watson Health, Experian" />
 <meta name="author" content="Krishna Paruchuri" />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#f5f1ea" />
@@ -20,7 +21,7 @@
 <meta property="og:image" content="https://krishnaparuchuri.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Krishna Paruchuri — Senior Product Manager at the intersection of healthcare, fintech and AI" />
+<meta property="og:image:alt" content="Krishna Paruchuri — Senior Product Manager specialising in healthcare, fintech, AI governance and LLM observability" />
 
 <!-- ═══ Twitter Card ═══ -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -83,7 +84,7 @@
       "@id": "https://krishnaparuchuri.com/#website",
       "url": "https://krishnaparuchuri.com",
       "name": "Krishna Paruchuri — Senior Product Manager",
-      "description": "Portfolio of Krishna Paruchuri, Senior Product Manager specialising in healthcare, fintech, and agentic AI.",
+      "description": "Portfolio of Krishna Paruchuri, Senior Product Manager specialising in healthcare, fintech, agentic AI, AI governance, agent lifecycle management, and LLM observability.",
       "author": { "@id": "https://krishnaparuchuri.com/#person" }
     },
     {
@@ -117,6 +118,7 @@
       "@type": "CreativeWork",
       "@id": "https://krishnaparuchuri.com/#fraudshield",
       "name": "FraudShield",
+      "url": "https://fraudshield.krishnaparuchuri.com",
       "description": "A mobile-first identity verification and fraud detection tool for India's Aadhaar-linked KYC market. Returns a 0–100 risk score in under two seconds, scanning for SIM swaps, synthetic identities, duplicate accounts, and velocity attacks. Designed around UIDAI masking patterns and RBI/DPDP Act guidelines.",
       "author": { "@id": "https://krishnaparuchuri.com/#person" },
       "keywords": "fraud detection, identity verification, KYC, Aadhaar, fintech, UIDAI, NBFC, RBI compliance, DPDP Act"
@@ -380,8 +382,10 @@ footer { padding: 40px 0 60px; border-top: 1px solid var(--rule); margin-top: 40
         <div class="comp-item"><span class="idx">/02</span><span class="name">EHR / EMR · Payer &amp; Claims</span></div>
         <div class="comp-item"><span class="idx">/03</span><span class="name">Product Architecture</span></div>
         <div class="comp-item"><span class="idx">/04</span><span class="name">Agentic AI &amp; RAG</span></div>
-        <div class="comp-item"><span class="idx">/05</span><span class="name">Fraud Detection &amp; Identity</span></div>
-        <div class="comp-item"><span class="idx">/06</span><span class="name">Fintech &amp; Enterprise B2B</span></div>
+        <div class="comp-item"><span class="idx">/05</span><span class="name">AI Governance &amp; Agent Lifecycle Management</span></div>
+        <div class="comp-item"><span class="idx">/06</span><span class="name">LLM Observability &amp; Eval-Gated Deployment</span></div>
+        <div class="comp-item"><span class="idx">/07</span><span class="name">Fraud Detection &amp; Identity</span></div>
+        <div class="comp-item"><span class="idx">/08</span><span class="name">Fintech &amp; Enterprise B2B</span></div>
       </div>
     </div>
   </section>
@@ -455,6 +459,16 @@ footer { padding: 40px 0 60px; border-top: 1px solid var(--rule); margin-top: 40
             <figure class="screenshot">
               <img src="agentops-governance.png" alt="AgentOps Governance Queue — pending approval requests, active alerts including eval degradation and cost threshold warnings" />
               <figcaption>Governance Queue — maker-checker approvals + active alerts</figcaption>
+            </figure>
+
+            <figure class="screenshot">
+              <img src="langsmith-projects.png" alt="LangSmith tracing dashboard showing medassist and gmp-deviation-review projects with 0% error rate, P50 and P99 latency, token counts, and APAC endpoint" />
+              <figcaption>LangSmith projects — 0% error rate · P99 2.85s · APAC endpoint</figcaption>
+            </figure>
+
+            <figure class="screenshot">
+              <img src="langsmith-trace-detail.png" alt="LangSmith trace detail for medassist-scheduling showing anonymised input, structured JSON output, 1.67s latency, and PHI anonymised before push label" />
+              <figcaption>Trace detail — PHI anonymised before push · 1.67s · structured output</figcaption>
             </figure>
           </div>
 
@@ -637,7 +651,7 @@ footer { padding: 40px 0 60px; border-top: 1px solid var(--rule); margin-top: 40
 
             <div class="project-links">
               <a href="https://github.com/krishnaparuchuri-productmanager/fraudshieldidentity" target="_blank" rel="noopener" class="project-link">Repository <span class="arrow">→</span></a>
-              <a href="https://fraudshieldidentitymvp.lovable.app" target="_blank" rel="noopener" class="project-link">MVP preview <span class="arrow">→</span></a>
+              <a href="https://fraudshield.krishnaparuchuri.com" target="_blank" rel="noopener" class="project-link">MVP preview <span class="arrow">→</span></a>
             </div>
           </div>
 
@@ -651,7 +665,7 @@ footer { padding: 40px 0 60px; border-top: 1px solid var(--rule); margin-top: 40
     <div class="contact-inner">
       <div class="section-num">04 — Contact</div>
       <div class="contact-body">
-        <h2>Building something<br/>at the intersection of<br/>healthcare, fintech, or AI?<br/><span class="italic">Let's talk.</span></h2>
+        <h2>Building something<br/>at the intersection of<br/>healthcare, fintech,<br/>AI governance,<br/>or LLM observability?<br/><span class="italic">Let's talk.</span></h2>
         <a href="mailto:krishna1parchuri@gmail.com" class="email">krishna1parchuri@gmail.com</a>
       </div>
     </div>
