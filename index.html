@@ -122,6 +122,15 @@
       "description": "A mobile-first identity verification and fraud detection tool for India's Aadhaar-linked KYC market. Returns a 0–100 risk score in under two seconds, scanning for SIM swaps, synthetic identities, duplicate accounts, and velocity attacks. Designed around UIDAI masking patterns and RBI/DPDP Act guidelines.",
       "author": { "@id": "https://krishnaparuchuri.com/#person" },
       "keywords": "fraud detection, identity verification, KYC, Aadhaar, fintech, UIDAI, NBFC, RBI compliance, DPDP Act"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://krishnaparuchuri.com/#procureops",
+      "name": "ProcureOps — Procurement Governance Platform",
+      "description": "A Router + 6 specialist AI agents governing procurement source-to-pay: requisition intake, sourcing strategy, quote comparison with winner's-curse price flagging, invoice three-way match, inventory reorder, and bounded-autonomy contract renewal. Third AgentOps governance vertical — maker-checker, INSERT-only audit log, and policy-snapshot-at-decision-time apply identically across the sourcing and P2P sides. Adds game-theoretic negotiation support (BATNA/ZOPA), auction-mechanism selection (sealed-bid/English reverse/Vickrey), and a real, code-computed win-probability layer.",
+      "url": "https://procureops.krishna1parchuri.workers.dev/",
+      "author": { "@id": "https://krishnaparuchuri.com/#person" },
+      "keywords": "procurement AI, source-to-pay, S2P, sourcing, P2P, agentic AI, AI governance, maker-checker, bounded autonomy, game theory, auction mechanisms, RAG, LLM evaluation, FastAPI, Claude AI"
     }
   ]
 }
@@ -562,6 +571,77 @@ footer { padding: 40px 0 60px; border-top: 1px solid var(--rule); margin-top: 40
             <div class="project-links">
               <a href="https://github.com/krishnaparuchuri-productmanager/sop-deviation-review" target="_blank" rel="noopener" class="project-link">View repository <span class="arrow">→</span></a>
               <a href="https://gmpdeviationreview.krishnaparuchuri.com/" target="_blank" rel="noopener" class="project-link">Live demo <span class="arrow">→</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection-label" style="margin-top: 80px;">Featured Experiment</div>
+
+        <div class="featured-card">
+          <div class="left">
+            <div class="tag">Agentic AI · Multi-Agent Governance · Procurement (S2P)</div>
+            <h3>ProcureOps —<br/>Procurement<br/>Governance Platform.</h3>
+
+            <div class="media-placeholder">
+              <div class="icon">◆</div>
+              <div class="text">Screenshot pending</div>
+              <div class="subtext">Home — Router, 6 specialists, S2P positioning note</div>
+            </div>
+
+            <div class="media-placeholder">
+              <div class="icon">◆</div>
+              <div class="text">Screenshot pending</div>
+              <div class="subtext">Decision detail — RAG citations &amp; governance trail</div>
+            </div>
+
+            <div class="media-placeholder">
+              <div class="icon">◆</div>
+              <div class="text">Screenshot pending</div>
+              <div class="subtext">Autonomy Config — bounded-autonomy threshold bands</div>
+            </div>
+
+            <div class="media-placeholder">
+              <div class="icon">◆</div>
+              <div class="text">Screenshot pending</div>
+              <div class="subtext">Sourcing Strategy — auction mechanism recommendation</div>
+            </div>
+
+            <div class="pillars">
+              <div class="pillar-label">Six specialists</div>
+              <div class="pillar-list">
+                <div><span class="num">01</span>Requisition Intake</div>
+                <div><span class="num">02</span>Sourcing Strategy</div>
+                <div><span class="num">03</span>Sourcing / Quote Comparison</div>
+                <div><span class="num">04</span>Invoice Verification</div>
+                <div><span class="num">05</span>Inventory Management</div>
+                <div><span class="num">06</span>Contract Renewal</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p class="desc">Third AgentOps governance vertical, alongside GMP Deviation Review and MediAssist — a Router classifies incoming procurement requests and hands off to six specialists spanning both sides of source-to-pay. Every proposal that touches money leaving the company is human-gated by design: an agent can never approve its own recommendation.</p>
+
+            <p class="desc">Positioned as an <strong>S2P governance platform</strong>, precisely: maker-checker, the audit log, and policy-snapshot-at-decision-time apply identically whether a specialist sits on the sourcing side (Sourcing Strategy, Sourcing / Quote Comparison, Negotiation Brief, Contract Renewal) or the P2P side (Requisition Intake, Invoice Verification, Inventory Management) — one governance spine, not two separate rulebooks. The closed-loop data half of S2P — a shared contract object threading a sourcing award into downstream requisition and invoice enforcement — is the deliberate next milestone, not a claim this build makes today.</p>
+
+            <p class="desc">Bounded-autonomy Contract Renewal auto-clears only against thresholds a company explicitly configures per category, evaluated as plain code, never LLM judgment. Sourcing carries a winner's-curse check comparing a quote only against that same vendor's own price history. Negotiation Brief reasons in BATNA/ZOPA/trade-menu terms and Sourcing Strategy recommends a bidding mechanism (sealed-bid, English reverse, or Vickrey) grounded in the real qualified vendor pool — every computed statistic (win-probability, price deviation) comes from real historical data, handed to the LLM as ground truth, never fabricated by the model itself.</p>
+
+            <div class="stat-strip">
+              <div class="stat"><div class="value">6</div><div class="label">Specialists governed</div></div>
+              <div class="stat"><div class="value">8</div><div class="label">Eval dimensions</div></div>
+              <div class="stat"><div class="value">0</div><div class="label">Self-approved decisions</div></div>
+            </div>
+
+            <div class="tech-strip">
+              <div><span class="label">Stack —</span>FastAPI · SQLite WAL · React 18 SPA · Cloudflare Workers · Railway</div>
+              <div><span class="label">AI —</span>Claude Haiku 4.5 (intake, inventory) · Claude Sonnet 4.6 (sourcing, invoice, negotiation, renewal)</div>
+              <div><span class="label">Pattern —</span>Maker-checker · INSERT-only audit · Policy-snapshot-at-decision-time · Bounded autonomy</div>
+              <div><span class="label">Differentiators —</span>Winner's-curse price flagging · Game-theoretic negotiation &amp; auction selection · Real-stats-vs-LLM separation</div>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/krishnaparuchuri-productmanager/procureops" target="_blank" rel="noopener" class="project-link">View repository <span class="arrow">→</span></a>
+              <a href="https://procureops.krishna1parchuri.workers.dev/" target="_blank" rel="noopener" class="project-link">Live demo <span class="arrow">→</span></a>
             </div>
           </div>
         </div>
